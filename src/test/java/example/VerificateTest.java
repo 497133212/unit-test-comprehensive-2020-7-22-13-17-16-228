@@ -29,4 +29,16 @@ public class VerificateTest {
         //then
         assertEquals(Boolean.FALSE, flag);
     }
+
+    @Test
+    void should_return_false_when_play_verificateAnswer_given_1227() {
+        //given
+        Verificate verificate = new Verificate();
+
+        //when
+        boolean flag = verificate.verificateAnswer("1227");
+
+        //then
+        assertEquals(Boolean.FALSE, flag);
+    }
 }
