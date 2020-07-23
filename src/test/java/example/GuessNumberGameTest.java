@@ -30,12 +30,11 @@ public class GuessNumberGameTest {
         assertEquals("2A2B", guessResult);
     }
 
-
     @Test
     void should_return_1A1B_when_1025_given_1234() {
         //given
         AnswerGenerate mockedAnswerGenerate = Mockito.mock(AnswerGenerate.class);
-        given(mockedAnswerGenerate.generate()).willReturn("1025");
+        given(mockedAnswerGenerate.generate()).willReturn("1234");
         GameNumberGame gameNumberGame = new GameNumberGame(mockedAnswerGenerate);
 
         //when
