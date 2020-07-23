@@ -1,8 +1,10 @@
 package example;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.BDDMockito.given;
 
 public class GuessNumberGameTest {
 
@@ -26,5 +28,19 @@ public class GuessNumberGameTest {
         String guessResult = gameNumberGame.guess("1243");
         //then
         assertEquals("2A2B", guessResult);
+    }
+
+
+    @Test
+    void should_return_1A1B_when_1025_given_1234() {
+        //given
+        AnswerGenerate mockedAnswerGenerate = Mockito.mock(AnswerGenerate.class);
+        given(mockedAnswerGenerate.generate()).willReturn("1025");
+        GameNumberGame gameNumberGame = new GameNumberGame(mockedAnswerGenerate);
+
+        //when
+        String guessResult = gameNumberGame.guess("1025");
+        //then
+        assertEquals("1A1B", guessResult);
     }
 }
