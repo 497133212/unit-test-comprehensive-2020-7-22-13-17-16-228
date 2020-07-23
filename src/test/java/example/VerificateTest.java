@@ -41,4 +41,16 @@ public class VerificateTest {
         //then
         assertEquals(Boolean.FALSE, flag);
     }
+
+    @Test
+    void should_return_false_when_play_verificateAnswer_given_12345() {
+        //given
+        Verificate verificate = new Verificate();
+
+        //when
+        boolean flag = verificate.verificateAnswer("12345");
+
+        //then
+        assertEquals(Boolean.FALSE, flag);
+    }
 }
