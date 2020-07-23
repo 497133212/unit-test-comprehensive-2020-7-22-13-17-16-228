@@ -81,16 +81,4 @@ public class GuessNumberGameTest {
         //then
         assertEquals("0A0B", guessResult);
     }
-
-    @Test
-    void should_return_answer_when_generate() {
-        //given
-        AnswerGenerateImplement answerGenerateImplement = new AnswerGenerateImplement();
-
-        //when
-        String answer = answerGenerateImplement.generate();
-
-        //then
-        System.out.println(answer);
-    }
 }
