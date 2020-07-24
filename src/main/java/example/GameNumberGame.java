@@ -14,20 +14,16 @@ public class GameNumberGame {
     public String guess(String guess) {
         int allRight = 0;
         int positionRight = 0;
-        String number = answer;
-        for(int i=0;i<guess.length();i++) {
-            String guessSubstring = guess.substring(i,i+1);
-            boolean flag = number.contains(guessSubstring);
-            if(flag) {
-                int index = number.indexOf(guessSubstring);
-                if(index == i) {
-                    allRight++;
-                } else {
-                    positionRight++;
-                }
+        String number = this.answer;
+        for (int i = 0; i < guess.length(); i++) {
+            char charIndex = guess.charAt(i);
+            int index = number.indexOf(charIndex);
+            if (index == i) {
+                allRight++;
+                continue;
             }
+            positionRight = index != -1 ? ++positionRight : positionRight;
         }
-        String result = String.format("%sA%sB",allRight, positionRight);
-        return result;
+        return String.format("%sA%sB", allRight, positionRight);
     }
 }

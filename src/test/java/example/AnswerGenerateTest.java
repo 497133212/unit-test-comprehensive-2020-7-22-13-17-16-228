@@ -2,6 +2,8 @@ package example;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 public class AnswerGenerateTest {
 
     @Test
@@ -13,6 +15,6 @@ public class AnswerGenerateTest {
         String answer = answerGenerateImplement.generate();
 
         //then
-        System.out.println(answer);
+        assertNotNull(answer);
     }
 }
