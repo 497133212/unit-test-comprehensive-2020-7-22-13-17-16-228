@@ -1,13 +1,13 @@
 package example;
 
-public class GameNumberGame {
+public class GuessNumberGame {
     private String answer;
 
-    public GameNumberGame(String answer) {
+    public GuessNumberGame(String answer) {
         this.answer = answer;
     }
 
-    public GameNumberGame(AnswerGenerate answerGenerate) {
+    public GuessNumberGame(AnswerGenerate answerGenerate) {
         this.answer = answerGenerate.generate();
     }
 

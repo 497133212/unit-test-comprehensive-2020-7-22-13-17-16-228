@@ -7,15 +7,19 @@ public class MainProcess {
         AnswerGenerate answerGenerate = new AnswerGenerateImplement();
         PrintMessage printMessage = new PrintMessage();
         String answer = answerGenerate.generate();
-        printMessage.print(answer);
+        printMessage.print("Answer:" + answer);
+        printMessage.print("Please enter the number you want to guess. You have a total of six chances.");
         Scanner scanner = new Scanner(System.in);
         for (int i = 1; i <= 6; i++) {
-            String guess = scanner.next();
+            StringBuilder guess = new StringBuilder();
+            for (int j = 0; j < 4; j++) {
+                guess.append(scanner.nextInt());
+            }
             Verificate verificate = new Verificate();
-            boolean flag = verificate.verificateAnswer(guess);
+            boolean flag = verificate.verificateAnswer(guess.toString());
             if (flag) {
-                GameNumberGame gameNumberGame = new GameNumberGame(answer);
-                String result = gameNumberGame.guess(guess);
+                GuessNumberGame guessNumberGame = new GuessNumberGame(answer);
+                String result = guessNumberGame.guess(guess.toString());
                 System.out.println(result);
                 if ("4A0B".equals(result)) {
                     printMessage.print("you win!");

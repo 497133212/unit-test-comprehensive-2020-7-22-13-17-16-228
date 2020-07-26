@@ -11,7 +11,7 @@ public class GuessNumberGameTest {
     @Test
     void should_return_4A0B_when_1234_given_1234() {
         //given
-        GameNumberGame gameNumberGame = new GameNumberGame("1234");
+        GuessNumberGame gameNumberGame = new GuessNumberGame("1234");
 
         //when
         String guessResult = gameNumberGame.guess("1234");
@@ -22,7 +22,7 @@ public class GuessNumberGameTest {
     @Test
     void should_return_2A2B_when_1243_given_1234() {
         //given
-        GameNumberGame gameNumberGame = new GameNumberGame("1234");
+        GuessNumberGame gameNumberGame = new GuessNumberGame("1234");
 
         //when
         String guessResult = gameNumberGame.guess("1243");
@@ -35,7 +35,7 @@ public class GuessNumberGameTest {
         //given
         AnswerGenerate mockedAnswerGenerate = Mockito.mock(AnswerGenerate.class);
         given(mockedAnswerGenerate.generate()).willReturn("1234");
-        GameNumberGame gameNumberGame = new GameNumberGame(mockedAnswerGenerate);
+        GuessNumberGame gameNumberGame = new GuessNumberGame(mockedAnswerGenerate);
 
         //when
         String guessResult = gameNumberGame.guess("1025");
@@ -48,7 +48,7 @@ public class GuessNumberGameTest {
         //given
         AnswerGenerate mockedAnswerGenerate = Mockito.mock(AnswerGenerate.class);
         given(mockedAnswerGenerate.generate()).willReturn("1234");
-        GameNumberGame gameNumberGame = new GameNumberGame(mockedAnswerGenerate);
+        GuessNumberGame gameNumberGame = new GuessNumberGame(mockedAnswerGenerate);
 
         //when
         String guessResult = gameNumberGame.guess("4321");
@@ -61,7 +61,7 @@ public class GuessNumberGameTest {
         //given
         AnswerGenerate mockedAnswerGenerate = Mockito.mock(AnswerGenerate.class);
         given(mockedAnswerGenerate.generate()).willReturn("1234");
-        GameNumberGame gameNumberGame = new GameNumberGame(mockedAnswerGenerate);
+        GuessNumberGame gameNumberGame = new GuessNumberGame(mockedAnswerGenerate);
 
         //when
         String guessResult = gameNumberGame.guess("2107");
@@ -74,7 +74,7 @@ public class GuessNumberGameTest {
         //given
         AnswerGenerate mockedAnswerGenerate = Mockito.mock(AnswerGenerate.class);
         given(mockedAnswerGenerate.generate()).willReturn("1234");
-        GameNumberGame gameNumberGame = new GameNumberGame(mockedAnswerGenerate);
+        GuessNumberGame gameNumberGame = new GuessNumberGame(mockedAnswerGenerate);
 
         //when
         String guessResult = gameNumberGame.guess("5678");
