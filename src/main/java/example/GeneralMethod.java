@@ -1,6 +1,6 @@
 package example;
 
-public class PrintMessage {
+public class GeneralMethod {
 
     public void print(String message) {
         System.out.println(message);
