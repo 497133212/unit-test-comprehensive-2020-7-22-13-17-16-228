@@ -4,15 +4,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class VerificateTest {
+public class VerificationInputNumberTest {
 
     @Test
     void should_return_ture_when_play_verificateAnswer_given_1234() {
         //given
-        VerificationInputNumber verificate = new VerificationInputNumber();
+        VerificationInputNumber verificationInputNumber = new VerificationInputNumber();
 
         //when
-        boolean flag = verificate.verificationGuessNumber("1234");
+        boolean flag = verificationInputNumber.verificationGuessNumber("1234");
 
         //then
         assertEquals(Boolean.TRUE, flag);
@@ -21,10 +21,10 @@ public class VerificateTest {
     @Test
     void should_return_false_when_play_verificateAnswer_given_12() {
         //given
-        VerificationInputNumber verificate = new VerificationInputNumber();
+        VerificationInputNumber verificationInputNumber = new VerificationInputNumber();
 
         //when
-        boolean flag = verificate.verificationGuessNumber("12");
+        boolean flag = verificationInputNumber.verificationGuessNumber("12");
 
         //then
         assertEquals(Boolean.FALSE, flag);
@@ -33,10 +33,10 @@ public class VerificateTest {
     @Test
     void should_return_false_when_play_verificateAnswer_given_1227() {
         //given
-        VerificationInputNumber verificate = new VerificationInputNumber();
+        VerificationInputNumber verificationInputNumber = new VerificationInputNumber();
 
         //when
-        boolean flag = verificate.verificationGuessNumber("1227");
+        boolean flag = verificationInputNumber.verificationGuessNumber("1227");
 
         //then
         assertEquals(Boolean.FALSE, flag);
@@ -45,10 +45,10 @@ public class VerificateTest {
     @Test
     void should_return_false_when_play_verificateAnswer_given_12345() {
         //given
-        VerificationInputNumber verificate = new VerificationInputNumber();
+        VerificationInputNumber verificationInputNumber = new VerificationInputNumber();
 
         //when
-        boolean flag = verificate.verificationGuessNumber("12345");
+        boolean flag = verificationInputNumber.verificationGuessNumber("12345");
 
         //then
         assertEquals(Boolean.FALSE, flag);
