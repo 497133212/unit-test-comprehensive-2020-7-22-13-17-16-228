@@ -2,7 +2,7 @@ package example;
 
 public class GeneralMethod {
 
-    public void print(String message) {
+    public void printMessage(String message) {
         System.out.println(message);
     }
 }
