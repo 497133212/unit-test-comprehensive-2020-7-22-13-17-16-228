@@ -13,7 +13,7 @@ public class GuessNumberGame {
 
     public String guess(String guess) {
         int allRight = 0;
-        int positionRight = 0;
+        int correctPosition = 0;
         String number = this.answer;
         for (int i = 0; i < guess.length(); i++) {
             char charIndex = guess.charAt(i);
@@ -22,8 +22,8 @@ public class GuessNumberGame {
                 allRight++;
                 continue;
             }
-            positionRight = index != -1 ? ++positionRight : positionRight;
+            correctPosition = index != -1 ? ++correctPosition : correctPosition;
         }
-        return String.format("%sA%sB", allRight, positionRight);
+        return String.format("%sA%sB", allRight, correctPosition);
     }
 }
