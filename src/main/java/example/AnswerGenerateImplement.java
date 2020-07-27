@@ -9,9 +9,9 @@ public class AnswerGenerateImplement implements AnswerGenerate {
         Random ran = new Random();
         int i = 0;
         while (i < 4) {
-            int number = ran.nextInt(10);
-            if (stringBuffer.indexOf(String.valueOf(number)) == -1) {
-                stringBuffer.append(number);
+            int generateNumber = ran.nextInt(10);
+            if (stringBuffer.indexOf(String.valueOf(generateNumber)) == -1) {
+                stringBuffer.append(generateNumber);
                 i++;
             }
         }
