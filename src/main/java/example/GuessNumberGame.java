@@ -12,18 +12,18 @@ public class GuessNumberGame {
     }
 
     public String guess(String guess) {
-        int allRight = 0;
+        int correctPositionAndNumber = 0;
         int correctPosition = 0;
         String number = this.answer;
         for (int i = 0; i < guess.length(); i++) {
             char charIndex = guess.charAt(i);
             int index = number.indexOf(charIndex);
             if (index == i) {
-                allRight++;
+                correctPositionAndNumber++;
                 continue;
             }
             correctPosition = index != -1 ? ++correctPosition : correctPosition;
         }
-        return String.format("%sA%sB", allRight, correctPosition);
+        return String.format("%sA%sB", correctPositionAndNumber, correctPosition);
     }
 }
