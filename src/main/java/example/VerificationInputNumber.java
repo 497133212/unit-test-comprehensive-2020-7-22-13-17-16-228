@@ -6,7 +6,7 @@ import java.util.List;
 
 public class VerificationInputNumber {
 
-    public boolean verificateAnswer(String guess) {
+    public boolean verificationGuessNumber(String guess) {
         StringBuilder stringBuffer = new StringBuilder();
         if (guess != null && guess.length() == 4) {
             for (int i = 0; i < guess.length(); i++) {

@@ -12,7 +12,7 @@ public class VerificateTest {
         VerificationInputNumber verificate = new VerificationInputNumber();
 
         //when
-        boolean flag = verificate.verificateAnswer("1234");
+        boolean flag = verificate.verificationGuessNumber("1234");
 
         //then
         assertEquals(Boolean.TRUE, flag);
@@ -24,7 +24,7 @@ public class VerificateTest {
         VerificationInputNumber verificate = new VerificationInputNumber();
 
         //when
-        boolean flag = verificate.verificateAnswer("12");
+        boolean flag = verificate.verificationGuessNumber("12");
 
         //then
         assertEquals(Boolean.FALSE, flag);
@@ -36,7 +36,7 @@ public class VerificateTest {
         VerificationInputNumber verificate = new VerificationInputNumber();
 
         //when
-        boolean flag = verificate.verificateAnswer("1227");
+        boolean flag = verificate.verificationGuessNumber("1227");
 
         //then
         assertEquals(Boolean.FALSE, flag);
@@ -48,7 +48,7 @@ public class VerificateTest {
         VerificationInputNumber verificate = new VerificationInputNumber();
 
         //when
-        boolean flag = verificate.verificateAnswer("12345");
+        boolean flag = verificate.verificationGuessNumber("12345");
 
         //then
         assertEquals(Boolean.FALSE, flag);
