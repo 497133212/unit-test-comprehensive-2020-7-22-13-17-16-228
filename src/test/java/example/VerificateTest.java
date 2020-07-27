@@ -9,7 +9,7 @@ public class VerificateTest {
     @Test
     void should_return_ture_when_play_verificateAnswer_given_1234() {
         //given
-        Verificate verificate = new Verificate();
+        VerificationInputNumber verificate = new VerificationInputNumber();
 
         //when
         boolean flag = verificate.verificateAnswer("1234");
@@ -21,7 +21,7 @@ public class VerificateTest {
     @Test
     void should_return_false_when_play_verificateAnswer_given_12() {
         //given
-        Verificate verificate = new Verificate();
+        VerificationInputNumber verificate = new VerificationInputNumber();
 
         //when
         boolean flag = verificate.verificateAnswer("12");
@@ -33,7 +33,7 @@ public class VerificateTest {
     @Test
     void should_return_false_when_play_verificateAnswer_given_1227() {
         //given
-        Verificate verificate = new Verificate();
+        VerificationInputNumber verificate = new VerificationInputNumber();
 
         //when
         boolean flag = verificate.verificateAnswer("1227");
@@ -45,7 +45,7 @@ public class VerificateTest {
     @Test
     void should_return_false_when_play_verificateAnswer_given_12345() {
         //given
-        Verificate verificate = new Verificate();
+        VerificationInputNumber verificate = new VerificationInputNumber();
 
         //when
         boolean flag = verificate.verificateAnswer("12345");

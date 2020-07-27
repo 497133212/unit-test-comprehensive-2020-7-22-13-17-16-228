@@ -4,7 +4,7 @@ package example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Verificate {
+public class VerificationInputNumber {
 
     public boolean verificateAnswer(String guess) {
         StringBuilder stringBuffer = new StringBuilder();
